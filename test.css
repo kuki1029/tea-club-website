@@ -9,6 +9,13 @@ body {
   height: 100%;
 }
 
+p{
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  font-family: roboto;
+}
+
 canvas {
   display: block;
   width: 100%;

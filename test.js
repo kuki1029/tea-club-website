@@ -13,7 +13,7 @@ function drawGradient() {
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 
     // Define color stops
-    gradient.addColorStop(0, '#ff7eb3'); // Light Pink
+    gradient.addColorStop(0, '#000000'); // Light Pink
     gradient.addColorStop(0.5, '#65d6ce'); // Aqua Blue
     gradient.addColorStop(1, '#ffeb3b'); // Yellow
 
