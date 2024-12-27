@@ -10,7 +10,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  transform: translate(-50%, 20px);
+  transform: translate(0, 20px);
   display: none;
 }
 .view.active {
