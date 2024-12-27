@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .view {
@@ -17,7 +16,7 @@
 .view.active {
   display: block;
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translate(0, 0);
 }
 /* Target <a> tag within the class btn-group */
 .btn-group a {
