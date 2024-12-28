@@ -1,73 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Canvas</title>
+    <link rel="stylesheet" href="test.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gradient Canvas</title>
-  <link rel="stylesheet" href="test.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-</head>
+  <body>
+    <p></p>
 
-<body>
-  <p></p>
+    <!-- UW Tea Club-->
 
-  <div class="home-navbar">
-    <div>
-      UW <br />
-      Tea <br />
-      Club
-    </div>
-    <!-- <div>Tea</div>
-      <div>Club</div> -->
-    <!-- <div>UW Tea Club</div> -->
-  </div>
-
-  <div class="navbar">
-    <div>About</div>
-    <div>Membership</div>
-    <div>Highlights</div>
-    <div>Executives</div>
-    <div>Contact</div>
-  </div>
-
-  <div class="social-navbar">
-    <a href="https://www.instagram.com/uwteaclub/" target="_blank">
-      <div><i class="fa-brands fa-instagram"></i> Instagram</div>
-    </a>
-
-    <a href="https://discord.com/invite/h98hrYY3wE" target="_blank">
-      <div><i class="fa-brands fa-discord"></i> Discord</div>
-    </a>
-
-    <a href="https://linktr.ee/uwteaclub" target="_blank">
+    <div class="home-navbar">
       <div>
-        <svg id="linktree" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
-          text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
-          viewBox="0 0 417 512.238">
-          <path fill="#fff" fill-rule="nonzero"
-            d="M171.274 344.942h74.09v167.296h-74.09V344.942zM0 173.468h126.068l-89.622-85.44 49.591-50.985 85.439 87.829V0h74.086v124.872L331 37.243l49.552 50.785-89.58 85.241L417 173.268v70.502H290.252l90.183 87.63L331 381.192 208.519 258.11 86.037 381.192l-49.591-49.591 90.218-87.631H0v-70.502z" />
-        </svg>
-        Linktree
+        UW <br />
+        Tea <br />
+        Club
       </div>
-    </a>
+      <!-- <div>Tea</div>
+      <div>Club</div> -->
+      <!-- <div>UW Tea Club</div> -->
+    </div>
 
-    <a href="https://open.spotify.com/user/uwteaclub" target="_blank">
-      <div><i class="fa-brands fa-spotify"></i> Spotify</div>
-    </a>
-  </div>
+    <!-- Navigation bar contents-->
 
-  <div class="center">
-    <p>Hey there!</p>
-  </div>
+    <div class="navbar">
+      <div><a href="" onclick="showView('view1');return false">Home</a></div>
+      <div><a href="" onclick="showView('view2');return false">About</a></div>
+      <div>
+        <a href="" onclick="showView('view3');return false">Membership</a>
+      </div>
+      <div>
+        <a href="" onclick="showView('view4');return false">Highlights</a>
+      </div>
+      <div>
+        <a href="" onclick="showView('view5');return false">Executives</a>
+      </div>
+      <div><a href="" onclick="showView('view6');return false">Contact</a></div>
+    </div>
 
-  <p>UW</p>
+    <div class="center">
+      <div id="view2" class="view">
+        <h2>About</h2>
+        <p>What is tea club?</p>
+      </div>
 
-  <canvas id="gradientCanvas"></canvas>
+      <div id="view3" class="view">
+        <h2>Membership</h2>
+        <p>Want to become a member? Here's how!</p>
+      </div>
 
-  <script src="test5.js"></script>
+      <div id="view6" class="view">
+        <h2>Contact</h2>
+        <a href="https://www.instagram.com/uwteaclub/" target="_blank">
+          <div><i class="fa-brands fa-instagram"></i> Instagram</div>
+        </a>
 
-  <script type="importmap">
+        <a href="https://discord.com/invite/h98hrYY3wE" target="_blank">
+          <div><i class="fa-brands fa-discord"></i> Discord</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="social-navbar">
+      <a href="https://www.instagram.com/uwteaclub/" target="_blank">
+        <div><i class="fa-brands fa-instagram"></i> Instagram</div>
+      </a>
+
+      <a href="https://discord.com/invite/h98hrYY3wE" target="_blank">
+        <div><i class="fa-brands fa-discord"></i> Discord</div>
+      </a>
+
+      <a href="https://linktr.ee/uwteaclub" target="_blank">
+        <div>
+          <svg
+            id="linktree"
+            xmlns="http://www.w3.org/2000/svg"
+            shape-rendering="geometricPrecision"
+            text-rendering="geometricPrecision"
+            image-rendering="optimizeQuality"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            viewBox="0 0 417 512.238"
+          >
+            <path
+              fill="#fff"
+              fill-rule="nonzero"
+              d="M171.274 344.942h74.09v167.296h-74.09V344.942zM0 173.468h126.068l-89.622-85.44 49.591-50.985 85.439 87.829V0h74.086v124.872L331 37.243l49.552 50.785-89.58 85.241L417 173.268v70.502H290.252l90.183 87.63L331 381.192 208.519 258.11 86.037 381.192l-49.591-49.591 90.218-87.631H0v-70.502z"
+            />
+          </svg>
+          Linktree
+        </div>
+      </a>
+
+      <a href="https://open.spotify.com/user/uwteaclub" target="_blank">
+        <div><i class="fa-brands fa-spotify"></i> Spotify</div>
+      </a>
+    </div>
+
+    <canvas id="gradientCanvas"></canvas>
+
+    <script src="test5.js"></script>
+
+    <script type="importmap">
       {
         "imports": {
           "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
@@ -75,6 +115,6 @@
         }
       }
     </script>
-</body>
-
+    <script src="displayContent.js"></script>
+  </body>
 </html>
