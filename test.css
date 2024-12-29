@@ -76,18 +76,29 @@ canvas {
 .home-navbar > div {
   transition: color 1s ease, mix-blend-mode 1s ease;
   cursor:pointer;
+  z-index: 999;
+  
 }
 
 .home-navbar > div:hover {
   color: #ff6347;
   mix-blend-mode: multiply;
   transition: color 1s ease, mix-blend-mode 1s ease;
+  z-index: 999;
 }
 
-.social-navbar a {
+.home-navbar a {
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
   transition: color 0.5s ease, mix-blend-mode 0.5s ease;
+  z-index: 999;
+}
+
+.home-navbar a:hover {
+  color: #ff6347;
+  mix-blend-mode: multiply;
+  transition: color 0.5s ease, mix-blend-mode 0.5s ease;
+  z-index: 999;
 }
 
 
@@ -166,7 +177,20 @@ canvas {
   transform: translate(0, 0);
 }
 
-h2 a{
-  cursor: default;
+#contact {
+  font-size: 3rem;
+  font-family: 'Open Sans';
+  text-align: center;
 }
 
+#contact a:hover {
+  color: #ff6347;
+  mix-blend-mode: multiply;
+  transition: color 0.5s ease, mix-blend-mode 0.5s ease;
+}
+
+#contact a {
+  color: #ff6347;
+  mix-blend-mode: multiply;
+  transition: color 0.5s ease, mix-blend-mode 0.5s ease;
+}
