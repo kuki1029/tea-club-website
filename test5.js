@@ -48,3 +48,43 @@ svgImage.onload = () => {
   // Start the animation loop
   animateHueRotation();
 };
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach((card) => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (centerY - y) / 10;
+    const rotateY = (x - centerX) / 10;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+  });
+});
+
+const slides = document.querySelector('.carousel-slides');
+const slideCount = document.querySelectorAll('.slide').length;
+let currentIndex = 0;
+
+document.getElementById('prev').addEventListener('click', () => {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : slideCount - 1;
+  updateCarousel();
+});
+
+document.getElementById('next').addEventListener('click', () => {
+  currentIndex = (currentIndex < slideCount - 1) ? currentIndex + 1 : 0;
+  updateCarousel();
+});
+
+function updateCarousel() {
+  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}

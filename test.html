@@ -1,84 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gradient Canvas</title>
-    <link rel="stylesheet" href="test.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <p></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gradient Canvas</title>
+  <link rel="stylesheet" href="test.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
 
-    <!-- UW Tea Club-->
+<body>
+  <p></p>
 
-    <div class="home-navbar">
-      <div>
-        UW <br />
-        Tea <br />
-        Club
-      </div>
-      <!-- <div>Tea</div>
+  <!-- UW Tea Club-->
+
+  <div class="home-navbar">
+    <div>
+      UW <br />
+      Tea <br />
+      Club
+    </div>
+    <!-- <div>Tea</div>
       <div>Club</div> -->
-      <!-- <div>UW Tea Club</div> -->
+    <!-- <div>UW Tea Club</div> -->
+  </div>
+
+  <!-- Navigation bar contents-->
+
+  <div class="navbar">
+    <div><a href="" onclick="showView('view1');return false">Home</a></div>
+    <div><a href="" onclick="showView('view2');return false">About</a></div>
+    <div>
+      <a href="" onclick="showView('view3');return false">Membership</a>
+    </div>
+    <!-- <div>
+      <a href="" onclick="showView('view4');return false">Highlights</a>
+    </div> -->
+    <div>
+      <a href="" onclick="showView('view5');return false">Executives</a>
+    </div>
+    <div><a href="" onclick="showView('view6');return false">Contact</a></div>
+  </div>
+
+  <div class="center">
+
+    <div id="view2" class="view">
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">About Us</div>
+          <div class="card-content">
+            <img src="aboutImg.jpg" alt="About us image">
+            <div class="text">
+              We are UW's finest Tea Club! We meet every week Wednesdays in EV2 2002 at 6-8 pm. Every week we have 4
+              different teas and unlimited snacks and fun board games. Come along and make new friends, or do your
+              assignment, or read a book or whatever you want as long as you're drinking tea! P.S. Once a month we have
+              special snacks from a local bakery ;)
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Navigation bar contents-->
-
-    <div class="navbar">
-      <div><a href="" onclick="showView('view1');return false">Home</a></div>
-      <div><a href="" onclick="showView('view2');return false">About</a></div>
-      <div>
-        <a href="" onclick="showView('view3');return false">Membership</a>
+    <div id="view3" class="view">
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">Membership</div>
+          <div class="card-content">
+            <img src="membership.png" alt="About us image">
+            <div class="text">
+              The easier way to get a membership is to just show up to our meetings! We charge $20 for the term or $4
+              for each session. The term membership also comes with other special benefits! You can also purchase a
+              membership by <a href="https://wusa.ca/product/uw-tea-and-culture-club-w25/" target="_blank">clicking
+                here</a>.
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <a href="" onclick="showView('view4');return false">Highlights</a>
-      </div>
-      <div>
-        <a href="" onclick="showView('view5');return false">Executives</a>
-      </div>
-      <div><a href="" onclick="showView('view6');return false">Contact</a></div>
     </div>
 
-    <div class="center">
-      <div id="view2" class="view">
-        <h2>About</h2>
-        <p>What is tea club?</p>
+    <div id="view5" class="view">
+      <div class="card-container">
+        <div class="card_no_hover">
+          <div class="card-header">Executives</div>
+          <div class="carousel">
+            <div class="carousel-slides">
+              <div class="slide">
+                <img src="kook.jpg" alt="Slide 1">
+                <div class="text">Hey! I'm Kunal, the President of UW Tea Club.</div>
+              </div>
+              <div class="slide">
+                <img src="matilda.jpg" alt="Slide 1">
+                <div class="text">Hey! I'm Matilda, the Marketing Lead of UW Tea Club.</div>
+              </div>
+              <div class="slide">
+                <img src="akshay.jpg" alt="Slide 1">
+                <div class="text">Hey! I'm Akshay, the Treasurer of UW Tea Club.</div>
+              </div>
+              <div class="slide">
+                <img src="zaki.jpg" Slide 1">
+                <div class="text">Hey! I'm Zaki, the CTO (Chief Tea Officer) of UW Tea Club.</div>
+              </div>
+              <div class="slide">
+                <img src="chat.jpeg" alt="Slide 1">
+                <div class="text">Hey! I'm Chat, the VP of UW Tea Club.</div>
+              </div>
+              <div class="slide">
+                <img src="gong.jpeg" alt="Slide 1">
+                <div class="text">Hey! I'm Gong, the Secretary of UW Tea Club.</div>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button id="prev">&#10094;</button>
+              <button id="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div id="view3" class="view">
-        <h2>Membership</h2>
-        <p>Want to become a member? Here's how!</p>
-      </div>
+    <div id="view6" class="view">
 
-      <div id="view6" class="view">
-        
-        <a id="contact" href="https://www.instagram.com/uwteaclub/" target="_blank">
-          <div><i class="fa-brands fa-instagram"></i> Instagram</div>
-        </a>
+      <a id="contact" href="https://www.instagram.com/uwteaclub/" target="_blank">
+        <div><i class="fa-brands fa-instagram"></i> Instagram</div>
+      </a>
 
-        <a id="contact" href="https://discord.com/invite/h98hrYY3wE" target="_blank">
-          <div><i class="fa-brands fa-discord"></i> Discord</div>
-        </a>
+      <a id="contact" href="https://discord.com/invite/h98hrYY3wE" target="_blank">
+        <div><i class="fa-brands fa-discord"></i> Discord</div>
+      </a>
 
-        <a id="contact" href="mailto:uwteaclub@gmail.com
+      <a id="contact" href="mailto:uwteaclub@gmail.com
         " target="_blank">
-          <div><i class="fa-solid fa-envelope"></i> Email</div>
-        </a>
+        <div><i class="fa-solid fa-envelope"></i> Email</div>
+      </a>
 
-        <a id="contact" href="https://open.spotify.com/user/uwteaclub" target="_blank">
-          <div><i class="fa-brands fa-spotify"></i> Spotify</div>
-        </a>
+      <a id="contact" href="https://open.spotify.com/user/uwteaclub" target="_blank">
+        <div><i class="fa-brands fa-spotify"></i> Spotify</div>
+      </a>
 
 
-      </div>
     </div>
+  </div>
 
-    <!-- <div class="social-navbar">
+  <!-- <div class="social-navbar">
       <a href="https://www.instagram.com/uwteaclub/" target="_blank">
         <div><i class="fa-brands fa-instagram"></i> Instagram</div>
       </a>
@@ -114,22 +177,22 @@
       </a>
     </div> -->
 
-    <div class="social-navbar">
-      <a href="https://www.instagram.com/anoaeyto/" target="_blank">
-        <div><i class="fa-brands fa-instagram"></i> @anoaeyto</div>
-      </a>
+  <div class="social-navbar">
+    <a href="https://www.instagram.com/anoaeyto/" target="_blank">
+      <div><i class="fa-brands fa-instagram"></i> @anoaeyto</div>
+    </a>
 
-      <a href="https://www.instagram.com/uwteaclub/" target="_blank"> @uwteaclub</a> 
-      
+    <a href="https://www.instagram.com/uwteaclub/" target="_blank"> @uwteaclub</a>
 
 
-    </div>
 
-    <canvas id="gradientCanvas"></canvas>
+  </div>
 
-    <script src="test5.js"></script>
+  <canvas id="gradientCanvas"></canvas>
 
-    <script type="importmap">
+  <script src="test5.js"></script>
+
+  <script type="importmap">
       {
         "imports": {
           "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
@@ -137,6 +200,7 @@
         }
       }
     </script>
-    <script src="displayContent.js"></script>
-  </body>
+  <script src="displayContent.js"></script>
+</body>
+
 </html>

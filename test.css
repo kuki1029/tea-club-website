@@ -75,9 +75,8 @@ canvas {
 
 .home-navbar > div {
   transition: color 1s ease, mix-blend-mode 1s ease;
-  cursor:pointer;
+  cursor: pointer;
   z-index: 999;
-  
 }
 
 .home-navbar > div:hover {
@@ -100,7 +99,6 @@ canvas {
   transition: color 0.5s ease, mix-blend-mode 0.5s ease;
   z-index: 999;
 }
-
 
 /** section for social media nav bar **/
 
@@ -179,7 +177,7 @@ canvas {
 
 #contact {
   font-size: 3rem;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   text-align: center;
 }
 
@@ -193,4 +191,169 @@ canvas {
   color: #ff6347;
   mix-blend-mode: multiply;
   transition: color 0.5s ease, mix-blend-mode 0.5s ease;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  height: 50vh;
+  width: 60vw;
+  background: rgba(255, 255, 255, 0.403);
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  flex-direction: column;
+  padding: 20px;
+  height: fit-content;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_no_hover {
+  height: 50vh;
+  width: 60vw;
+  background: rgba(255, 255, 255, 0.403);
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  flex-direction: column;
+  padding: 20px;
+  height: fit-content;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  font-family: Playfair Display;
+  text-align: center;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.card-content img {
+  height: 70%;
+  width: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.card-content .text {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-family: Playfair Display;
+  line-height: 1.5;
+  overflow-y: inherit;
+}
+
+.card-content a {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-family: Playfair Display;
+  line-height: 1.5;
+  overflow-y: inherit;
+  height: 30%;
+}
+
+.content {
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .card-content {
+    flex-direction: column;
+  }
+
+  .card-content img {
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+    display: none;
+  }
+}
+
+.carousel {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 300%; /* Adjust based on number of slides */
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+
+  align-items: center;
+}
+
+.slide img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.slide .text {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Playfair Display;
+  word-wrap: break-word;
+  /* horrible width setting. must change. only did it to make a quickj MVP */
+  width: 20%;
+  overflow-wrap: break-word;
+  max-width: calc(100% - 120px); /* Prevent overflow from text */
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-controls button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
 }
