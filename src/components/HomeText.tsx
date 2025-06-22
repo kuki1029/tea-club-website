@@ -1,6 +1,6 @@
 export const HomeText = () => {
   return (
-    <h1 className="font-neue absolute bottom-0 text-9xl text-white">
+    <h1 className="absolute bottom-0 font-neue text-7xl text-white">
       UW <br /> Tea Club
     </h1>
   );
