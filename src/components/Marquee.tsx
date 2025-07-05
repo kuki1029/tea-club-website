@@ -18,7 +18,7 @@ export const Marquee = ({
   return (
     <div
       className={cn(
-        'max-sm:h-100 mx-auto block h-[600px] overflow-hidden ',
+        'max-sm:h-100 mx-auto block h-[600px] overflow-hidden rounded-2xl',
         className,
       )}
     >
@@ -28,7 +28,7 @@ export const Marquee = ({
             style={{
               transform: 'rotateX(55deg) rotateY(0deg) rotateZ(-45deg)',
             }}
-            className="transform-3d relative right-[50%] top-[32rem] grid size-full origin-top-left grid-cols-4 gap-8"
+            className="transform-3d relative right-[50%] top-96 grid size-full origin-top-left grid-cols-4 gap-8"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div

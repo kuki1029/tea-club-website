@@ -7,11 +7,11 @@ const navLinks = [
   },
   {
     title: 'About',
-    link: '#home',
+    link: '#about',
   },
   {
-    title: 'Apply',
-    link: '#home',
+    title: 'Pricing',
+    link: '#pricing',
   },
 ];
 

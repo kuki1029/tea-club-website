@@ -3,7 +3,7 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from '@heroicons/react/20/solid';
-import aboutUsTea from '../assets/images/aboutUsTea.jpg';
+import aboutUsTea from '../assets/images/6.jpg';
 
 const features = [
   {
@@ -29,7 +29,7 @@ const features = [
 
 export const AboutUs = () => {
   return (
-    <div className="overflow-hidden bg-inherit py-24 sm:py-32">
+    <div id="about" className="overflow-hidden bg-inherit py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-full grid-cols-1 place-items-center gap-x-8 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none">
           {/* Text */}
@@ -63,7 +63,7 @@ export const AboutUs = () => {
             <img
               alt="Tea Club execs"
               src={aboutUsTea}
-              className="aspect-square h-auto max-h-72 max-w-full items-center rounded-xl shadow-xl ring-1 ring-gray-400/10"
+              className=" h-auto max-h-72 max-w-full items-center rounded-xl shadow-xl ring-1 ring-gray-400/10"
             />
           </div>
         </div>

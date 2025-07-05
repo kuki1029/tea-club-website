@@ -1,34 +1,46 @@
-import img1 from '../assets/images/1.jpg';
-import img2 from '../assets/images/2.jpg';
-import img3 from '../assets/images/3.jpg';
-import img4 from '../assets/images/4.jpg';
+import chat from '../assets/images/chat.jpeg';
+import zaki from '../assets/images/zaki.jpg';
+import mat from '../assets/images/mat.jpg';
+import gong from '../assets/images/gong.jpeg';
+import akshay from '../assets/images/akshay.jpg';
+import kun from '../assets/images/kun.jpg';
 
 const people = [
   {
-    name: 'Alanna',
+    name: 'Kunal',
     role: 'Prez',
-    imageUrl: img1,
+    imageUrl: kun,
   },
   {
-    name: 'Alanna',
+    name: 'Akshay',
     role: 'Treasurer',
-    imageUrl: img2,
+    imageUrl: akshay,
   },
   {
-    name: 'Alanna',
+    name: 'Gong',
     role: 'Secretary',
-    imageUrl: img3,
+    imageUrl: gong,
   },
   {
-    name: 'Alanna',
-    role: 'Designer',
-    imageUrl: img4,
+    name: 'Chat',
+    role: 'Vice Prez.',
+    imageUrl: chat,
+  },
+  {
+    name: 'Matilda',
+    role: 'Chief Designer',
+    imageUrl: mat,
+  },
+  {
+    name: 'Zaki',
+    role: 'Chief Tea Officer',
+    imageUrl: zaki,
   },
 ];
 
 export const Execs = () => {
   return (
-    <div className="bg-inherit py-24 sm:py-32">
+    <div className="bg-inherit py-24 sm:px-8 sm:py-32">
       <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-xl">
           <h2 className="text-pretty text-3xl font-semibold tracking-tight text-white sm:text-4xl">
@@ -42,15 +54,15 @@ export const Execs = () => {
         </div>
         <ul
           role="list"
-          className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+          className="col-span-2 grid gap-x-8  gap-y-12 sm:grid-cols-2 sm:gap-y-16"
         >
           {people.map((person) => (
             <li key={person.name}>
-              <div className="flex items-center gap-x-6">
+              <div className="flex items-center gap-x-6 px-8">
                 <img
                   alt=""
                   src={person.imageUrl}
-                  className="size-16 rounded-full"
+                  className="aspect-auto size-16 rounded-full"
                 />
                 <div>
                   <h3 className="text-base/7 font-semibold tracking-tight text-white">

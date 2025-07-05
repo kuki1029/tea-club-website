@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-unknown-property */
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, forwardRef } from 'react';
 import type { ThreeEvent } from '@react-three/fiber';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { EffectComposer, wrapEffect } from '@react-three/postprocessing';
@@ -157,8 +157,6 @@ class RetroEffectImpl extends Effect {
     return this.uniforms.get('pixelSize')!.value;
   }
 }
-
-import { forwardRef } from 'react';
 
 const RetroEffect = forwardRef<
   RetroEffectImpl,

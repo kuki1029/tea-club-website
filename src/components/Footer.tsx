@@ -28,7 +28,7 @@ const footerLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-inherit font-sans">
+    <footer className="bg-inherit font-sans sm:px-8">
       <div className="container mx-auto px-6 py-12">
         <div className="gap-6sm:gap-y-10 grid grid-cols-2">
           <div className="">

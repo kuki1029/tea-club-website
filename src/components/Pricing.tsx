@@ -5,7 +5,7 @@ const tiers = [
   {
     name: 'Session',
     id: 'tier-session',
-    href: '#',
+    href: '',
     priceMonthly: '$4',
     description: "Perfect if you'd like to try out the membership!",
     features: ['Unlimited Snacks', 'Unlimited Tea', 'Board Games'],
@@ -14,7 +14,7 @@ const tiers = [
   {
     name: 'Term',
     id: 'tier-term',
-    href: '#',
+    href: 'https://linktr.ee/uwteaclub',
     priceMonthly: '$20',
     description:
       'Get a whole term worth of unlimited tea, snacks, and fun vibes!',
@@ -35,7 +35,10 @@ function classNames(...classes: string[]) {
 
 export const Pricing = () => {
   return (
-    <div className="relative isolate bg-inherit px-6 py-24 sm:py-32 lg:px-8">
+    <div
+      id="pricing"
+      className="relative isolate bg-inherit px-6 py-24 sm:py-32 lg:px-8"
+    >
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -62,8 +65,8 @@ export const Pricing = () => {
             key={tier.id}
             className={classNames(
               tier.featured
-                ? 'relative bg-white shadow-2xl'
-                : 'bg-gray-900 sm:mx-8 lg:mx-0',
+                ? 'relative bg-white/70 shadow-2xl'
+                : 'bg-black/50 sm:mx-8 lg:mx-0',
               tier.featured
                 ? ''
                 : tierIdx === 0

@@ -20,6 +20,12 @@ import img18 from '../assets/images/18.jpg';
 import img19 from '../assets/images/19.jpg';
 import img20 from '../assets/images/20.jpg';
 import img21 from '../assets/images/21.jpg';
+import img23 from '../assets/images/23.jpg';
+import img24 from '../assets/images/24.jpg';
+import img25 from '../assets/images/25.jpg';
+import img26 from '../assets/images/26.jpg';
+import img27 from '../assets/images/27.jpg';
+import img28 from '../assets/images/28.jpg';
 
 export const MarqueeImages = () => {
   const images = [
@@ -32,6 +38,8 @@ export const MarqueeImages = () => {
     img7,
     img8,
     img9,
+    img24,
+
     img10,
     img11,
     img12,
@@ -44,11 +52,16 @@ export const MarqueeImages = () => {
     img19,
     img20,
     img21,
+    img23,
+    img25,
+    img26,
+    img27,
+    img28,
   ];
 
   return (
     <div className="mx-auto  bg-inherit p-2 ring-1 ring-neutral-700/10 ">
-      <Marquee images={images} />
+      <Marquee images={images.sort(() => Math.random() - 0.5)} />
     </div>
   );
 };
