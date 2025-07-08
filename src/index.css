@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "daisyui";
+
+@font-face {
+  font-family: 'Neue';
+  src: url('./fonts/NeuePixelSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
