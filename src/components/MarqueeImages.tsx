@@ -39,7 +39,6 @@ export const MarqueeImages = () => {
     img8,
     img9,
     img24,
-
     img10,
     img11,
     img12,
