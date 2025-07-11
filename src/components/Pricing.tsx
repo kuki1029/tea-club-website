@@ -133,6 +133,8 @@ export const Pricing = () => {
             <a
               href={tier.href}
               aria-describedby={tier.id}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
               className={classNames(
                 tier.featured
                   ? 'bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500'

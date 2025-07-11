@@ -11,7 +11,7 @@ import { Footer } from './Footer';
 export const Mainpage = () => {
   return (
     <div className="h-[300vh] bg-black">
-      <div className="absolute h-[110vh] w-full">
+      <div className="absolute h-[110vh] w-full" id="home">
         <Dither
           waveColor={[5, 0.9, 0.5]}
           disableAnimation={false}
